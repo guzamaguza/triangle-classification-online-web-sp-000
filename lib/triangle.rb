@@ -8,38 +8,38 @@ class Triangle
     end
 
     def kind
-      if
-        if @first + @second < @third
-          begin
-            raise TriangleError => error
-          rescue
-            puts error.message
-          end
-        elsif @first + @third < @second
-          begin
-            raise TriangleError => error
-          rescue
-            puts error.message
-          end
-        elsif @second + @third < @first
-          begin
-            raise TriangleError => error
-          rescue
-            puts error.message
-          end
-        elsif @first == 0 && @second == 0 && @third == 0
-          begin
-            raise TriangleError => error
-          rescue
-            puts error.message
-          end
-        elsif @first < 0 || @second < 0 || @third < 0
-          begin
-            raise TriangleError => error
-          rescue
-            puts error.message
-          end
+  
+      if @first + @second < @third
+        begin
+          raise TriangleError => error
+        rescue
+          puts error.message
         end
+      elsif @first + @third < @second
+        begin
+          raise TriangleError => error
+        rescue
+          puts error.message
+        end
+      elsif @second + @third < @first
+        begin
+          raise TriangleError => error
+        rescue
+          puts error.message
+        end
+      elsif @first == 0 && @second == 0 && @third == 0
+        begin
+          raise TriangleError => error
+        rescue
+          puts error.message
+        end
+      elsif @first < 0 || @second < 0 || @third < 0
+        begin
+          raise TriangleError => error
+        rescue
+          puts error.message
+        end
+
       elsif @first == @second && @second == @third
         return :equilateral
       elsif @first == @second && @first != @third
