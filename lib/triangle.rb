@@ -14,8 +14,14 @@ class Triangle
         self.kind = isosceles
       elsif @first != @second && @first != @third && @second != @third
         self.kind = scalene
-      elsif
+      else 
+            if @first + @second < @third 
 
+            elsif @first + @third < @second 
+
+            elsif @second + @third < @first 
+
+            end
       end
 
     end
