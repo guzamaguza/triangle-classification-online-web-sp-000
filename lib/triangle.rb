@@ -37,7 +37,7 @@ class Triangle
               rescue
                 puts error.message
               end
-            elsif @first == 0 && @second == 0 && @third == 0 
+            elsif @first == 0 && @second == 0 && @third == 0
               begin
                 raise TriangleError => error
               rescue
