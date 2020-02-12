@@ -8,8 +8,13 @@ class Triangle
     end
 
     def kind
-
-      if @first + @second < @third
+      if @first == 0 && @second == 0 && @third == 0
+        begin
+          raise TriangleError => error
+        rescue
+          puts error.message
+        end
+      elsif @first + @second < @third
         begin
           raise TriangleError => error
         rescue
@@ -22,12 +27,6 @@ class Triangle
           puts error.message
         end
       elsif @second + @third < @first
-        begin
-          raise TriangleError => error
-        rescue
-          puts error.message
-        end
-      elsif @first == 0 && @second == 0 && @third == 0
         begin
           raise TriangleError => error
         rescue
