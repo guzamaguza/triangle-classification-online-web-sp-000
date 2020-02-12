@@ -17,21 +17,21 @@ class Triangle
       else
             if @first + @second < @third
               begin
-                raise TriangleError => error 
+                raise TriangleError => error
               rescue
-                puts error.message 
+                puts error.message
               end
             elsif @first + @third < @second
               begin
-                raise TriangleError => error 
+                raise TriangleError => error
               rescue
-                puts error.message 
+                puts error.message
               end
             elsif @second + @third < @first
               begin
-                raise TriangleError => error 
+                raise TriangleError => error
               rescue
-                puts error.message 
+                puts error.message
               end
             end
       end
