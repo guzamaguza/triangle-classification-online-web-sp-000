@@ -16,26 +16,30 @@ class Triangle
         self.kind = scalene
       else
             if @first + @second < @third
-
+              begin
+                raise TriangleError => error 
+              rescue
+                puts error.message 
+              end
             elsif @first + @third < @second
-
+              begin
+                raise TriangleError => error 
+              rescue
+                puts error.message 
+              end
             elsif @second + @third < @first
-
+              begin
+                raise TriangleError => error 
+              rescue
+                puts error.message 
+              end
             end
       end
-
     end
 
-    def TriangleError(triangle)
-      if triangle.class != Triangle
-        begin
-          raise TriangleError
-        rescue
 
-        end
-      end
         class TriangleError < StandardError
 
         end
-     end
+
 end
