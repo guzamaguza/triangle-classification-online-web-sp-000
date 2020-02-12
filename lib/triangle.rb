@@ -12,7 +12,7 @@ class Triangle
         self.kind = equilateral
       elsif @first == @second ^ @first == @third ^ @second == @third
         self.kind = isosceles
-      elsif
+      elsif @first != @second && @first != @third && @second != @third
         self.kind = scalene
       elsif
 
