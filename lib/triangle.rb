@@ -8,7 +8,7 @@ class Triangle
     end
 
     def kind
-      if 
+      if
         if @first + @second < @third
           begin
             raise TriangleError => error
@@ -51,7 +51,7 @@ class Triangle
       elsif @first != @second && @first != @third && @second != @third
         return :scalene
       end
-      
+
       end
     end
 
