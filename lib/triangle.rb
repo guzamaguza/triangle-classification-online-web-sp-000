@@ -8,7 +8,39 @@ class Triangle
     end
 
     def kind
-      if @first == @second && @second == @third
+      if 
+        if @first + @second < @third
+          begin
+            raise TriangleError => error
+          rescue
+            puts error.message
+          end
+        elsif @first + @third < @second
+          begin
+            raise TriangleError => error
+          rescue
+            puts error.message
+          end
+        elsif @second + @third < @first
+          begin
+            raise TriangleError => error
+          rescue
+            puts error.message
+          end
+        elsif @first == 0 && @second == 0 && @third == 0
+          begin
+            raise TriangleError => error
+          rescue
+            puts error.message
+          end
+        elsif @first < 0 || @second < 0 || @third < 0
+          begin
+            raise TriangleError => error
+          rescue
+            puts error.message
+          end
+        end
+      elsif @first == @second && @second == @third
         return :equilateral
       elsif @first == @second && @first != @third
         return :isosceles
@@ -18,38 +50,8 @@ class Triangle
         return :isosceles
       elsif @first != @second && @first != @third && @second != @third
         return :scalene
-      else
-            if @first + @second < @third
-              begin
-                raise TriangleError => error
-              rescue
-                puts error.message
-              end
-            elsif @first + @third < @second
-              begin
-                raise TriangleError => error
-              rescue
-                puts error.message
-              end
-            elsif @second + @third < @first
-              begin
-                raise TriangleError => error
-              rescue
-                puts error.message
-              end
-            elsif @first == 0 && @second == 0 && @third == 0
-              begin
-                raise TriangleError => error
-              rescue
-                puts error.message
-              end
-            elsif @first < 0 || @second < 0 || @third < 0
-              begin
-                raise TriangleError => error
-              rescue
-                puts error.message
-              end
-            end
+      end
+      
       end
     end
 
