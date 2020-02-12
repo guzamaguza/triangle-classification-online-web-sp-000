@@ -14,6 +14,8 @@ class Triangle
         return :isosceles
       elsif @first == @third && @first != @second
         return :isosceles
+      elsif @second == @third && @first != @second
+        return :isosceles
       elsif @first != @second && @first != @third && @second != @third
         return :scalene
       else
