@@ -11,30 +11,13 @@ class Triangle
       if @first == 0 && @second == 0 && @third == 0
           raise TriangleError
       elsif @first + @second < @third
-        begin
-          raise TriangleError => error
-        rescue
-          puts error.message
-        end
+          raise TriangleError
       elsif @first + @third < @second
-        begin
-          raise TriangleError => error
-        rescue
-          puts error.message
-        end
+          raise TriangleError
       elsif @second + @third < @first
-        begin
-          raise TriangleError => error
-        rescue
-          puts error.message
-        end
+          raise TriangleError
       elsif @first < 0 || @second < 0 || @third < 0
-        begin
           raise TriangleError => error
-        rescue
-          puts error.message
-        end
-
       elsif @first == @second && @second == @third
         return :equilateral
       elsif @first == @second && @first != @third
