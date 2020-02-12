@@ -9,11 +9,7 @@ class Triangle
 
     def kind
       if @first == 0 && @second == 0 && @third == 0
-        begin
           raise TriangleError
-        rescue
-          #puts TriangleError.message
-        end
       elsif @first + @second < @third
         begin
           raise TriangleError => error
