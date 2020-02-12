@@ -10,7 +10,7 @@ class Triangle
     def kind
       if @first == @second && @second == @third
         self.kind = equilateral
-      elsif @first == @second ^ @first == @third ^ @second == @third 
+      elsif @first == @second ^ @first == @third ^ @second == @third
         self.kind = isosceles
       elsif
         self.kind = scalene
