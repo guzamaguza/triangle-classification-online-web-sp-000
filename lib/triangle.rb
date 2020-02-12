@@ -8,6 +8,15 @@ class Triangle
     end
 
     def kind
+      if @first == @second && @second == @third
+        self.kind = equilateral
+      elsif
+        self.kind = isosceles
+      elsif
+        self.kind = scalene
+      elsif
+
+      end
 
     end
 
