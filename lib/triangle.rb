@@ -53,7 +53,6 @@ class Triangle
 
     end
 
-
     class TriangleError < StandardError
             def message
               puts "Triangle inequality is not Satisfied OR Sides were 0 or Negative"
