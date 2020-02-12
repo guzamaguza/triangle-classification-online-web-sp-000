@@ -37,6 +37,12 @@ class Triangle
               rescue
                 puts error.message
               end
+            elsif @first == 0 && @second == 0 && @third == 0 
+              begin
+                raise TriangleError => error
+              rescue
+                puts error.message
+              end
             end
       end
     end
@@ -44,7 +50,7 @@ class Triangle
 
     class TriangleError < StandardError
             def message
-              puts "Triangle inequality is not Satisfied"
+              puts "Triangle inequality is not Satisfied OR Sides were 0 or Negative"
             end
     end
 
