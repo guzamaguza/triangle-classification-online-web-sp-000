@@ -10,7 +10,7 @@ class Triangle
     def kind
       if @first == 0 && @second == 0 && @third == 0
           raise TriangleError
-      elsif (@side_1+@side_2 <= @side_3) || (@side_1+@side_3 <= @side_2) || (@side_2+@side_3 <= @side_1)
+      elsif (@first+@second <= @third) || (@first+@third <= @second) || (@second+@third <= @first)
           raise TriangleError
       elsif @first < 0 || @second < 0 || @third < 0
           raise TriangleError => error
