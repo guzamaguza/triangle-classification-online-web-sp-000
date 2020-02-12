@@ -39,7 +39,9 @@ class Triangle
 
 
         class TriangleError < StandardError
-
+            def message 
+              puts "Triangle inequality is not Satisfied"
+            end
         end
 
 end
