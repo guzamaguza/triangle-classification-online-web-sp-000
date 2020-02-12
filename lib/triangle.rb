@@ -8,7 +8,7 @@ class Triangle
     end
 
     def kind
-  
+
       if @first + @second < @third
         begin
           raise TriangleError => error
