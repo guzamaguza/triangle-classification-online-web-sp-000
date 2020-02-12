@@ -12,7 +12,7 @@ class Triangle
         begin
           raise TriangleError
         rescue
-          puts TriangleError.message
+          #puts TriangleError.message
         end
       elsif @first + @second < @third
         begin
